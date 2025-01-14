@@ -23,27 +23,63 @@
         .readonly-item {
             margin-bottom: 15px;
         }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .search-options label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .buttons-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+        .buttons-container button.cancel {
+            background-color: #e74c3c;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Moje Narzędzie (Tryb Tylko do Odczytu)</h1>
+    <h1>Search Transaction</h1>
     <div class="readonly-container">
-        <div class="readonly-item">
-            <strong>Wizja narzędzia:</strong>
-            <p>To narzędzie pomoże użytkownikom w organizowaniu danych w sposób intuicyjny i efektywny.</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter data to search..." />
         </div>
-        <div class="readonly-item">
-            <strong>Funkcje:</strong>
-            <ul>
-                <li>Łatwe zarządzanie danymi</li>
-                <li>Intuicyjny interfejs</li>
-                <li>Integracja z bazą danych</li>
-            </ul>
+
+        <div class="search-options">
+            <label><input type="radio" name="searchOption" /> Order ID</label>
+            <label><input type="radio" name="searchOption" /> Short Order ID</label>
+            <label><input type="radio" name="searchOption" /> Ad ID</label>
+            <label><input type="radio" name="searchOption" /> Shipment Tracking Number</label>
         </div>
-        <div class="readonly-item">
-            <strong>Plan rozwoju:</strong>
-            <p>W przyszłości planujemy dodać opcję edytowania danych, ale obecnie aplikacja działa w trybie tylko do odczytu.</p>
+
+        <div class="buttons-container">
+            <button>Search</button>
+            <button class="cancel">Cancel Transaction</button>
         </div>
     </div>
 
