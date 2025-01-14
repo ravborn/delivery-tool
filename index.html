@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje narzędzie - ReadOnly</title>
+    <title>Delivery Customer Support Tool</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,6 +25,8 @@
         }
         .search-container {
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -34,19 +36,9 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        .search-options {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        .search-options label {
-            font-weight: normal;
-            cursor: pointer;
-        }
         .buttons-container {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 10px;
         }
         .buttons-container button {
             padding: 10px 20px;
@@ -60,16 +52,45 @@
         .buttons-container button.cancel {
             background-color: #e74c3c;
         }
+        .search-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .search-options label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .timeline {
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+        }
+        .timeline-entry {
+            margin: 10px 0;
+        }
+        .timeline-entry span {
+            font-weight: bold;
+        }
+        .delivery-details {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Search Transaction</h1>
+    <h1>Delivery Customer Support Tool</h1>
     <div class="readonly-container">
+        <!-- Wyszukiwanie -->
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Enter data to search..." />
+            <div class="buttons-container">
+                <button>Search</button>
+                <button class="cancel">Cancel Transaction</button>
+            </div>
         </div>
 
+        <!-- Opcje wyszukiwania -->
         <div class="search-options">
             <label><input type="radio" name="searchOption" /> Order ID</label>
             <label><input type="radio" name="searchOption" /> Short Order ID</label>
@@ -77,10 +98,44 @@
             <label><input type="radio" name="searchOption" /> Shipment Tracking Number</label>
         </div>
 
-        <div class="buttons-container">
-            <button>Search</button>
-            <button class="cancel">Cancel Transaction</button>
+        <!-- Timeline wyszukiwania -->
+        <div class="timeline">
+            <h2>Delivery Status</h2>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 7:38 AM</span> - ORDER_CREATED
+            </div>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 7:39 AM</span> - CONTRACT_CREATED
+            </div>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 7:45 AM</span> - SHIPMENT_CREATED
+            </div>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 7:49 AM</span> - SHIPMENT_LABEL_RECEIVED
+            </div>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 10:45 AM</span> - PACKAGE_POSTED
+            </div>
+            <div class="timeline-entry">
+                <span>November 15, 2024, 2:25 PM</span> - PACKAGE_IN_TRANSIT
+            </div>
+            <div class="timeline-entry">
+                <span>November 25, 2024, 12:19 PM</span> - CONTRACT_CANCELLED
+            </div>
+            <div class="timeline-entry">
+                <span>November 25, 2024, 12:19 PM</span> - REFUND_REQUESTED
+            </div>
+            <div class="timeline-entry">
+                <span>November 26, 2024, 9:37 AM</span> - REFUND_SENT
+            </div>
         </div>
+
+        <!-- Delivery Details -->
+        <div class="delivery-details">
+            <h2>Delivery Details</h2>
+            <p>Here you can show additional information regarding the delivery process, customer details, etc.</p>
+        </div>
+
     </div>
 
 </body>
