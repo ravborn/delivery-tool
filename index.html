@@ -84,11 +84,12 @@
         .delivery-details {
             font-size: 16px;
             margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
         }
-        .delivery-details h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 24px;
+        .order-info,
+        .participant-info {
+            width: 48%;
         }
         .section {
             background-color: #fff;
@@ -197,76 +198,67 @@
 
         <!-- Delivery Details -->
         <div class="delivery-details">
-            <h2>Delivery Details</h2>
-
-            <!-- Order Information -->
-            <div class="section">
-                <label>Order ID:</label>
-                <span>ABC12345 <button class="copy-button"><span class="copy-icon"></span></button></span>
+            <div class="order-info">
+                <h2>Order Information</h2>
+                <div class="section">
+                    <label>Order ID:</label>
+                    <span>ABC12345 <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
+                <div class="section">
+                    <label>Ad ID:</label>
+                    <span>XYZ98765 <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
+                <div class="section">
+                    <label>Product:</label>
+                    <span>Super Widget <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
+                <div class="section">
+                    <label>Tracking Number:</label>
+                    <span>123456789 <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
+                <div class="section">
+                    <label>Shipment Code:</label>
+                    <span>SHP98765 <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
+                <div class="section">
+                    <label>Order Number:</label>
+                    <span>ORD54321 <button class="copy-button"><span class="copy-icon"></span></button></span>
+                </div>
             </div>
-            <div class="section">
-                <label>Ad ID:</label>
-                <span>XYZ98765 <button class="copy-button"><span class="copy-icon"></span></button></span>
-            </div>
-            <div class="section">
-                <label>Product:</label>
-                <span>Super Widget <button class="copy-button"><span class="copy-icon"></span></button></span>
-            </div>
-
-            <!-- Shipment Information -->
-            <div class="section">
-                <label>Tracking Number:</label>
-                <span>123456789 <button class="copy-button"><span class="copy-icon"></span></button></span>
-            </div>
-            <div class="section">
-                <label>Shipment Code:</label>
-                <span>SHP98765 <button class="copy-button"><span class="copy-icon"></span></button></span>
-            </div>
-            <div class="section">
-                <label>Order Number:</label>
-                <span>ORD54321 <button class="copy-button"><span class="copy-icon"></span></button></span>
-            </div>
-
-            <!-- Package Details -->
-            <div class="section">
-                <label>Weight:</label>
-                <span>2.5 kg</span>
-            </div>
-            <div class="section">
-                <label>Size:</label>
-                <span>30 cm x 20 cm x 15 cm</span>
-            </div>
-
-            <!-- Price Information -->
-            <div class="section">
-                <label>Item Price:</label>
-                <span>120,00 PLN</span>
-            </div>
-            <div class="section">
-                <label>Shipment Cost:</label>
-                <span>5,99 PLN</span>
-            </div>
-            <div class="section">
-                <label><strong>Total:</strong></label>
-                <span><strong>125,99 PLN</strong></span>
-            </div>
-
-            <!-- Payment Method -->
-            <div class="section">
-                <label>Payment Method:</label>
-                <span>Bank Transfer / BLIK</span>
-            </div>
-
-            <!-- Sending Point -->
-            <div class="section">
-                <label>Sending Point:</label>
-                <span>City: Poznan, Street: Krolowej Jadwigi 43, Postal Code: 31-331</span>
-            </div>
-
-            <!-- Destination Point -->
-            <div class="section">
-                <label>Destination Point:</label>
-                <span>City: Warszawa, Street: Marszalkowska 21, Postal Code: 00-200</span>
+            <div class="participant-info">
+                <h2>Participant Information</h2>
+                <div class="section">
+                    <label>Weight:</label>
+                    <span>2.5 kg</span>
+                </div>
+                <div class="section">
+                    <label>Size:</label>
+                    <span>30 cm x 20 cm x 15 cm</span>
+                </div>
+                <div class="section">
+                    <label>Item Price:</label>
+                    <span>120,00 PLN</span>
+                </div>
+                <div class="section">
+                    <label>Shipment Cost:</label>
+                    <span>5,99 PLN</span>
+                </div>
+                <div class="section">
+                    <label><strong>Total:</strong></label>
+                    <span><strong>125,99 PLN</strong></span>
+                </div>
+                <div class="section">
+                    <label>Payment Method:</label>
+                    <span>Bank Transfer / BLIK</span>
+                </div>
+                <div class="section">
+                    <label>Sending Point:</label>
+                    <span>City: Poznan, Street: Krolowej Jadwigi 43, Postal Code: 31-331</span>
+                </div>
+                <div class="section">
+                    <label>Destination Point:</label>
+                    <span>City: Warszawa, Street: Marszalkowska 21, Postal Code: 00-200</span>
+                </div>
             </div>
         </div>
     </div>
