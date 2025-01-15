@@ -61,19 +61,46 @@
             font-weight: normal;
             cursor: pointer;
         }
+        /* Timeline styles */
         .timeline {
             margin-top: 30px;
             border-left: 4px solid #3498db;
             padding-left: 20px;
         }
         .timeline-entry {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .timeline-entry span {
             font-weight: bold;
+            display: inline-block;
+            width: 230px;
         }
+        /* Delivery details styles */
         .delivery-details {
-            margin-top: 30px;
+            margin-top: 50px;
+        }
+        .delivery-details h2 {
+            color: #2c3e50;
+        }
+        .delivery-details .section {
+            margin-bottom: 20px;
+        }
+        .delivery-details .section label {
+            font-weight: bold;
+            display: block;
+        }
+        .delivery-details .section span {
+            display: inline-block;
+            width: 200px;
+        }
+        .copy-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 12px;
+            border: none;
         }
     </style>
 </head>
@@ -133,7 +160,60 @@
         <!-- Delivery Details -->
         <div class="delivery-details">
             <h2>Delivery Details</h2>
-            <p>Here you can show additional information regarding the delivery process, customer details, etc.</p>
+
+            <!-- Order Information -->
+            <div class="section">
+                <label>Order Information - General:</label>
+                <span>Order ID: ABC12345 <button class="copy-button">Copy</button></span><br />
+                <span>Ad ID: XYZ98765 <button class="copy-button">Copy</button></span><br />
+                <span>Product: Super Widget <button class="copy-button">Copy</button></span>
+            </div>
+
+            <!-- Shipment -->
+            <div class="section">
+                <label>Shipment:</label>
+                <span>Tracking number: 123456789 <button class="copy-button">Copy</button></span><br />
+                <span>Shipment code: SHP98765 <button class="copy-button">Copy</button></span><br />
+                <span>Order number: ORD54321 <button class="copy-button">Copy</button></span>
+            </div>
+
+            <!-- Package -->
+            <div class="section">
+                <label>Package:</label>
+                <span>Weight: 2.5 kg</span><br />
+                <span>Size: 30 cm x 20 cm x 15 cm</span><br />
+            </div>
+
+            <!-- Price -->
+            <div class="section">
+                <label>Price:</label>
+                <span>Item: 120,00 PLN</span><br />
+                <span>Shipment cost: 5,99 PLN</span><br />
+                <span><strong>TOTAL: 125,99 PLN</strong></span>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="section">
+                <label>Payment Method:</label>
+                <span>Bank Transfer/ BLIK</span>
+            </div>
+
+            <!-- Sending Point -->
+            <div class="section">
+                <label>Sending Point:</label>
+                <span>City: Poznan</span><br />
+                <span>Street: Krolowej Jadwigi 43</span><br />
+                <span>Postal Code: 31-331</span>
+            </div>
+
+            <!-- Destination Point -->
+            <div class="section">
+                <label>Destination Point:</label>
+                <span>City: Warszawa</span><br />
+                <span>Street: Marszalkowska 21</span><br />
+                <span>Postal Code: 00-200</span>
+            </div>
+
         </div>
 
     </div>
