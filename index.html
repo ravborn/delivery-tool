@@ -13,6 +13,7 @@
         }
         h1 {
             color: #2c3e50;
+            margin-bottom: 20px;
         }
         .readonly-container {
             background-color: #fff;
@@ -68,7 +69,9 @@
             padding-left: 20px;
         }
         .timeline-entry {
-            margin: 15px 0;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #555;
         }
         .timeline-entry span {
             font-weight: bold;
@@ -78,29 +81,47 @@
         /* Delivery details styles */
         .delivery-details {
             margin-top: 50px;
+            font-size: 16px;
         }
         .delivery-details h2 {
             color: #2c3e50;
+            margin-bottom: 20px;
         }
         .delivery-details .section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
         }
         .delivery-details .section label {
             font-weight: bold;
             display: block;
+            margin-bottom: 8px;
         }
         .delivery-details .section span {
             display: inline-block;
-            width: 200px;
+            width: 220px;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
         .copy-button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 12px;
+            background-color: transparent;
             border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #3498db;
+        }
+        .copy-button:hover {
+            text-decoration: underline;
+        }
+        .copy-icon {
+            width: 16px;
+            height: 16px;
+            background: url('https://cdn-icons-png.flaticon.com/512/484/484662.png') no-repeat center center;
+            background-size: contain;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -164,17 +185,17 @@
             <!-- Order Information -->
             <div class="section">
                 <label>Order Information - General:</label>
-                <span>Order ID: ABC12345 <button class="copy-button">Copy</button></span><br />
-                <span>Ad ID: XYZ98765 <button class="copy-button">Copy</button></span><br />
-                <span>Product: Super Widget <button class="copy-button">Copy</button></span>
+                <span>Order ID: ABC12345 <button class="copy-button"><span class="copy-icon"></span></button></span><br />
+                <span>Ad ID: XYZ98765 <button class="copy-button"><span class="copy-icon"></span></button></span><br />
+                <span>Product: Super Widget <button class="copy-button"><span class="copy-icon"></span></button></span>
             </div>
 
             <!-- Shipment -->
             <div class="section">
                 <label>Shipment:</label>
-                <span>Tracking number: 123456789 <button class="copy-button">Copy</button></span><br />
-                <span>Shipment code: SHP98765 <button class="copy-button">Copy</button></span><br />
-                <span>Order number: ORD54321 <button class="copy-button">Copy</button></span>
+                <span>Tracking number: 123456789 <button class="copy-button"><span class="copy-icon"></span></button></span><br />
+                <span>Shipment code: SHP98765 <button class="copy-button"><span class="copy-icon"></span></button></span><br />
+                <span>Order number: ORD54321 <button class="copy-button"><span class="copy-icon"></span></button></span>
             </div>
 
             <!-- Package -->
